@@ -1,0 +1,52 @@
+.header-container {
+    background-image: url("../../assets/doctor-patient.jpg");
+    height: 100%;
+    background-position-y: center;
+    background-size: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-container {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    color: #16316e;
+    background-color: #d9e4fe;
+}
+
+.about-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.card {
+    font-size: 16px;
+    color: #16316e;
+    background-color: #d9e4fe;
+    width: 70%;
+    h4 {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.content {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 415px) {
+    .mission-container {
+        width: 80%;
+    }
+    .faq-email {
+        text-align: center;
+        font-size: large;
+    }
+    .card {
+        width: 95%;
+    }
+}

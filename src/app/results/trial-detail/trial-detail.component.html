@@ -1,0 +1,71 @@
+<mat-card class="container">
+  <mat-card-title class="title">{{ trial.title }}</mat-card-title>
+  <mat-card class="selected-result-container">
+    <div class="details-container">
+      <div class="details-wrapper">
+        <div class="organizer-phase-container">
+          <h2 class="sponsor">{{ checkSponsor(trial) }}</h2>
+          <mat-chip-list class="detail-phase">
+            <mat-chip class="phase-chip">{{ trial.phase }}</mat-chip>
+          </mat-chip-list>
+        </div>
+        <p>{{ trial.summary.description }}</p>
+        <!-- <h5>Primary Contact: {{trial.contacts[0].name}}</h5>
+                <h5>Phone: {{trial.contacts[0].phone}}</h5>
+                <h5>Email: {{trial.contacts[0].email}}</h5> -->
+        <!-- <div>{{formatDate(trial.startDate)}} - {{formatDate(trial.endDate)}}</div> -->
+      </div>
+      <div class="compensation-container">
+        <mat-card class="compensation"> Compensation </mat-card>
+        <mat-card (click)="openDialog()" class="sign-up-text">
+          <div class="sign-up-text-wrapper">Learn More!</div>
+          <mat-icon>email</mat-icon>
+        </mat-card>
+      </div>
+    </div>
+    <div class="location-intervention-container">
+      <div class="location-list">
+        <mat-card
+          class="location-container"
+          *ngFor="let loc of trial.facilities"
+        >
+          <div>
+            <mat-icon class="location-icon">place</mat-icon>
+          </div>
+          <div>
+            <mat-card-title>{{ loc.name }}</mat-card-title>
+            {{ loc.city }}, {{ loc.state }} {{ loc.zip }}
+          </div>
+        </mat-card>
+      </div>
+      <mat-accordion class="intervention-accordion" multi>
+        <h3 class="intervention-title">Treatment Types</h3>
+        <mat-expansion-panel
+          class="intervention-panel"
+          *ngFor="let intervention of trial.interventions"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ intervention.interventionType }}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ intervention.name }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            {{ intervention.description }}
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-card>
+  <div class="btn-wrapper">
+    <button
+      mat-raised-button
+      (click)="navigateToResults()"
+      class="submit-btn btn-style"
+    >
+      Back
+    </button>
+  </div>
+</mat-card>

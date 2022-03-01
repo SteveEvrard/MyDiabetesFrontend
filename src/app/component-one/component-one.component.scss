@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto&display=swap");
+@import "src/styles.scss";
+.width-adjust {
+    width: 100%;
+}
+
+.back-wrapper {
+    width: 75%;
+    display: flex;
+    cursor: pointer;
+}
+
+.chevron {
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.back-header {
+    z-index: 1;
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #d9e4fe;
+}
+
+.back {
+    width: 75%;
+    color: #16316e;
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 26px;
+}
+
+.input-container {
+    padding-top: 25px;
+}
+
+.component-card-container {
+    width: 100%;
+    // min-height: 40vh;
+    z-index: 1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.content-wrapper {
+    text-align: center;
+    min-height: 30vh;
+}
+
+.country-state-wrapper {
+    display: inline-flex;
+    width: 100%;
+}
+
+.state-wrapper {
+    padding-left: 40px;
+}
+
+.example-form {
+    // min-width: 150px;
+    padding-top: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 50%;
+    font-family: "Cairo", sans-serif;
+}
+
+.example-full-width {
+    width: 100%;
+    // min-width: 150px;
+}
+
+.example-radio-group {
+    display: inline;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.radio-btn-wrapper {
+    border: 1px solid black;
+    float: left;
+    width: 50%;
+}
+
+.example-radio-button {
+    margin: 5px;
+}
+
+.mat-card-title-style {
+    text-align: center;
+}
+
+.selector {
+    width: 100%;
+}
+
+.check-box {
+    width: 33%;
+    display: inline-block;
+}
+
+.end-date {
+    padding-left: 40px;
+}
+
+.radio-btns {
+    display: contents;
+}
+
+.radio-header {
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn-style {
+    margin-top: 50px;
+    width: 69%;
+    height: 47px;
+    border-radius: 5px;
+    background-color: #fc6b59;
+    color: white;
+    font-size: 16px;
+}
+
+button:disabled,
+button[disabled] {
+    background-color: #f7a398 !important;
+}
+
+.button-wrapper-submit {
+    position: absolute;
+    bottom: 10%;
+    left: 42%;
+    margin-top: 20px;
+    display: inline-block;
+    justify-content: center;
+    .submit-btn {
+        background-color: #fc6b59;
+        color: white;
+    }
+    button:disabled {
+        background-color: #f7a398;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    .submit-btn {
+        background-color: lightblue;
+        color: white;
+    }
+}
+
+.complete {
+    color: green($color: #48c56d);
+}
+
+.right-btn {
+    color: white;
+    position: absolute;
+    background-color: lightblue;
+}
+
+.progress-bar {
+    background-color: white;
+     ::ng-deep .progress-bar {
+        background-color: #fc6b59 !important;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .container {
+        padding-top: 15px;
+        width: 90%;
+    }
+    .submit-btn {
+        margin-top: 0px;
+    }
+    .card-container {
+        height: 100%;
+    }
+}

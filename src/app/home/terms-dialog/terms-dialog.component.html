@@ -1,0 +1,10 @@
+<h1 mat-dialog-title class="tc-title">Please Accept Our Terms to Get Started!</h1>
+
+<form [formGroup]="termsConditionForm" class="tc-form">
+    <div><mat-checkbox labelPosition="after" color="primary" formControlName="termsOfService">I agree to the terms <span [ngStyle]="{color: 'blue'}" (click)="openTerms()">here</span></mat-checkbox></div>
+    <div><mat-checkbox labelPosition="after" color="primary" formControlName="privacy">I agree to the privacy policy <span [ngStyle]="{color: 'blue'}" (click)="openTerms()">here</span></mat-checkbox></div>
+</form>
+<mat-dialog-actions align="end">
+    <button mat-raised-button [mat-dialog-close]="false">Decline</button>
+    <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial [disabled]="!termsConditionForm.valid" color="warn">Agree</button>
+</mat-dialog-actions>

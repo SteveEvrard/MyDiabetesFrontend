@@ -1,0 +1,24 @@
+.tc-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.tc-card {
+  background-color: lightgrey;
+}
+
+.tc-card-content {
+  overflow: auto;
+  height: 200px;
+}
+
+.tc-form {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 415px) {
+  .tc-title {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+}

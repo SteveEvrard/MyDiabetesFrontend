@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto&display=swap");
+@import "src/styles.scss";
+@import "src/app/component-one/component-one.component.scss";
+.chip {
+  height: 100%;
+  width: 25%;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.neither-chip {
+  width: 62%;
+}
+
+::ng-deep .mat-chip-list-wrapper {
+  justify-content: center;
+}
+
+.btn-padding {
+  padding-top: 45px;
+}
+
+.left-chip {
+  margin-right: 10% !important;
+}
+
+.selected {
+  background-color: #3a5daa !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: 415px) {
+  .btn-padding {
+    padding-top: 20px;
+  }
+  .submit-btn {
+    margin-top: 10px;
+  }
+  .chip {
+    width: auto;
+  }
+  .left-chip {
+    margin-right: 0px !important;
+  }
+}

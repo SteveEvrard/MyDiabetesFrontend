@@ -1,0 +1,54 @@
+<div class="back-header">
+    <div class="back-wrapper" (click)="navigateToHome()">
+        <img class="chevron" src="../../../assets/chevron.png">
+        <div class="back">Back to home</div>
+    </div>
+</div>
+<form class="example-form container" [formGroup]="locationForm">
+    <mat-card *ngIf="!loading" class="component-card-container">
+        <mat-card-content class="content-wrapper">
+            <p>
+                <ngb-progressbar class="progress-bar" type="success" [value]="75" [striped]="true" [animated]="true"><i>75%</i></ngb-progressbar>
+            </p>
+            <div class="wrapper">
+                <div class="state-container">
+                    <div class="title">What state are you in?</div>
+                    <mat-form-field class="selector state-input" appearance="outline">
+                        <mat-label>State</mat-label>
+                        <mat-select formControlName="state">
+                            <mat-option [value]="state" *ngFor="let state of states">
+                                {{ state }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="state-container">
+                    <div class="title">What is your zip code?</div>
+                    <mat-form-field class="selector state-input" appearance="outline">
+                        <mat-label>Zip</mat-label>
+                        <input matInput formControlName="zip">
+                        <mat-error>Please enter a valid zip code</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="travel-importance-wrapper">
+                    <div class="title">How important is it for the trial location to be in close proximity to you?</div>
+
+                    <mat-form-field class="selector travel-input" appearance="outline">
+                        <mat-label>Importance of travel distance to you</mat-label>
+                        <mat-select formControlName="travelImportance">
+                            <mat-option [value]="rating.value" *ngFor="let rating of ratings">
+                                {{ rating.text }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <button mat-raised-button [disabled]="!locationForm.valid" type="button" (click)="searchTrials()" class="submit-btn btn-style">
+                    Submit
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
+<app-loader *ngIf="loading"></app-loader>

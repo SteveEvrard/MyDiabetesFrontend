@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.logo-header {
+    width: 105px;
+    padding-top: 10px;
+}
+
+.toolbar-text-container {
+    display: flex;
+    width: 35%;
+    justify-content: center;
+    text-align: right;
+    height: 100%;
+    z-index: 1;
+    background-color: #3a5daa;
+}
+
+.my-styling {
+    font-family: "Pacifico", cursive;
+    color: #9caed4;
+}
+
+.title {
+    font-family: "Cairo", sans-serif;
+    font-size: 40px;
+    padding-top: 11px;
+}
+
+:host {
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.toolbar {
+    height: 110px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: #3a5daa;
+    color: white;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.logo-title {
+    display: flex;
+    width: 55%;
+    z-index: 1;
+    background-color: #3a5daa;
+    height: -webkit-fill-available;
+}
+
+.logo-title:hover {
+    cursor: pointer;
+}
+
+.toolbar img {
+    margin: 0 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #125699;
+}
+
+.toolbar-text {
+    font-size: 23px;
+    margin: auto;
+    width: 33%;
+    text-align: center;
+    height: 100%;
+    padding-top: 41px;
+    cursor: pointer;
+}
+
+.toolbar-text:hover {
+    background-color: #f1f6fe;
+    color: #3a5daa;
+}
+
+.faq {
+    text-align: center;
+}
+
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 415px) {
+    .toolbar {
+        display: block;
+        position: relative;
+    }
+    .logo-header {
+        width: 25%;
+    }
+    .toolbar img {
+        margin-right: 0px;
+    }
+    .logo-title {
+        width: 100%;
+    }
+    .title {
+        margin-top: 24px;
+        font-size: 24px;
+    }
+    .toolbar-text-container {
+        width: 100%;
+        display: inline-block;
+        height: 102px;
+        background-color: #d9e4fe;
+        color: #3a5daa;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+    }
+    .toolbar-text {
+        height: 30px;
+        padding-top: 0;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+    .about-us {
+        border-color: #3a5daa;
+        border-style: solid;
+        border-width: 2px;
+        border-right: hidden;
+        height: 38px;
+        border-left: hidden;
+    }
+    .faq {
+        margin-bottom: 2px;
+    }
+    .content {
+        margin-top: 102px;
+    }
+    .how-we-help {
+        margin-top: -10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-container>*:not(.circle-link),
+    .terminal {
+        width: 100%;
+    }
+    .card:not(.highlight-card) {
+        height: 16px;
+        margin: 8px 0;
+    }
+    .card.highlight-card span {
+        margin-left: 72px;
+    }
+    svg#rocket-smoke {
+        right: 120px;
+        transform: rotate(-5deg);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+        display: none;
+        visibility: hidden;
+    }
+}

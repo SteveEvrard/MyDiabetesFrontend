@@ -1,0 +1,36 @@
+@import "src/app/component-one/component-one.component.scss";
+.faq-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.accordion-wrapper {
+    width: 75%;
+    z-index: 1;
+}
+
+.panel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #d9e4fe;
+}
+
+.text {
+    color: #16316e;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 415px) {
+    .accordion-wrapper {
+        width: 95%;
+    }
+    .faq-email {
+        text-align: center;
+        font-size: large;
+    }
+}

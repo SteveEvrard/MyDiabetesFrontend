@@ -1,0 +1,32 @@
+@import "src/styles.scss";
+@import "src/app/component-one/component-one.component.scss";
+.email-submit-btn {
+  margin-left: 10px;
+  background-color: #407af8;
+  color: white;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.email-cancel-btn {
+  height: 40px;
+  border-radius: 4px;
+}
+
+.email-name-container {
+  display: flex;
+}
+
+.email-first {
+  width: 45%;
+}
+
+.email-last {
+  width: 45%;
+  margin-left: auto;
+}
+
+.email-dialog-container {
+  display: flex;
+  justify-content: flex-end;
+}

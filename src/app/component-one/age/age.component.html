@@ -1,0 +1,29 @@
+<div class="back-header">
+    <div class="back-wrapper" (click)="navigateToHome()">
+        <img class="chevron" src="../../../assets/chevron.png">
+        <div class="back">Back to home</div>
+    </div>
+</div>
+<form class="example-form container" [formGroup]="ageForm">
+    <mat-card *ngIf="!loading" class="component-card-container">
+        <mat-card-content class="content-wrapper">
+            <p>
+                <ngb-progressbar class="progress-bar" type="success" [value]="25" [striped]="true" [animated]="true"><i>25%</i></ngb-progressbar>
+            </p>
+            <div class="input-container">
+                <div class="title">How old are you?</div>
+                <mat-form-field appearance="outline" class="example-full-width selector">
+                    <mat-label>Age</mat-label>
+                    <input matInput formControlName="age">
+                    <mat-error>Please enter a valid age</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button [disabled]="!ageForm.valid" type="button" (click)="searchTrials()" class="submit-btn btn-style">
+                    Continue
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
+<app-loader *ngIf="loading"></app-loader>

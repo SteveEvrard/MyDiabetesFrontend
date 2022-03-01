@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto&display=swap");
+@import "src/styles.scss";
+@import "src/app/component-one/component-one.component.scss";
+.wrapper {
+    padding-top: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.state-container {
+    display: flex;
+    display: inline;
+    text-align: left;
+}
+
+.travel-input {
+    width: 75%;
+}
+
+.card-container {
+    min-height: 600px;
+}
+
+.travel-importance-wrapper {
+    text-align: left;
+}
+
+@media only screen and (max-width: 415px) {
+    .title {
+        font-size: 20px;
+    }
+    .travel-input {
+        width: 100%;
+    }
+}

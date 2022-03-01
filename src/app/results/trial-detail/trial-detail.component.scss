@@ -1,0 +1,174 @@
+@import "../results.component.scss";
+.selected-result-container {
+  margin: 15px;
+}
+
+.details-container {
+  display: flex;
+  margin-left: 10px;
+}
+
+.details-wrapper {
+  width: 70%;
+  color: #525656;
+}
+
+.compensation-container {
+  margin: auto;
+}
+
+.compensation {
+  background-color: rgb(81, 165, 81);
+  color: white;
+  font-family: "Cairo", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.sign-up-container {
+  margin-top: 10px;
+}
+
+.sign-up-text {
+  cursor: pointer;
+  background-color: #407af8;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-text-wrapper {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+.sign-up-button {
+  background-color: #407af8;
+  margin-left: 10px;
+}
+
+.email-icon {
+  font-size: 20px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-style {
+  margin-top: 10px;
+  width: 69%;
+  height: 47px;
+  border-radius: 5px;
+  background-color: #fc6b59;
+  color: white;
+  font-size: 16px;
+}
+
+.location-container {
+  display: flex;
+  margin: 10px;
+  color: #525656;
+  background-color: #f1f6fe;
+}
+
+.location-icon {
+  color: #fc6b59;
+  font-size: 55px;
+  width: 66px;
+}
+
+.intervention-panel {
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #f1f6fe;
+  color: #525656;
+}
+
+.organizer-phase-container {
+  display: flex;
+}
+
+.detail-phase {
+  width: 25%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.location-list {
+  width: 50%;
+  margin-top: 31px;
+}
+
+.location-intervention-container {
+  display: flex;
+}
+
+.intervention-accordion {
+  width: 50%;
+}
+
+.intervention-title {
+  color: #525656;
+  text-align: center;
+}
+
+.phase-chip {
+  width: max-content;
+}
+
+.sponsor {
+  width: 75%;
+}
+
+.snackbar {
+  background-color: forestgreen;
+  color: white;
+}
+
+@media only screen and (max-width: 415px) {
+  .location-container {
+    width: 92%;
+  }
+  .details-container {
+    display: inline-block;
+  }
+  .sign-up-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .sign-up-text {
+    margin-top: 8px;
+  }
+  .details-wrapper {
+    width: 100%;
+  }
+  .organizer-phase-container {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .detail-phase {
+    margin-bottom: 5px;
+  }
+  .location-intervention-container {
+    display: flex;
+    flex-flow: column;
+  }
+  .location-list {
+    width: 100%;
+    order: 2;
+  }
+  .intervention-accordion {
+    width: 100%;
+    order: 1;
+  }
+  .sponsor {
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+<div class="back-header">
+    <div class="back-wrapper" (click)="navigateToHome()">
+        <img class="chevron" src="../../../assets/chevron.png">
+        <div class="back">Back to home</div>
+    </div>
+</div>
+<mat-card class="container">
+    <div>
+        <mat-card-title class="title">We searched over 15,000 trials for you</mat-card-title>
+        <mat-card-title class="title">And we found {{results.length}} available trial<span *ngIf="results.length != 1">s</span> that match your conditions!</mat-card-title>
+        <mat-card-title *ngIf="!displayResults" class="title">ENTER YOUR EMAIL BELOW TO VIEW ALL {{results.length}}</mat-card-title>
+        <form *ngIf="!displayResults" [formGroup]="emailForm">
+            <mat-card>
+                <div class="email-form">
+                    <mat-form-field appearance="outline" class="example-full-width selector">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+                </div>            
+            </mat-card>
+            <div class="email-form">
+                <button mat-raised-button [disabled]="!emailForm.valid" type="button" (click)="save()" class="submit-btn btn-style">
+                    Continue
+                </button>       
+            </div>
+        </form>
+        <div *ngIf="displayResults">
+            <mat-card (click)="displayTrial(result)" *ngFor="let result of pageResults" class="results-container">
+                <div class="location-phase-container">
+                    <div class="locations">Location: {{result.facilities[0].city}}, {{result.facilities[0].state}}<span *ngIf="result.facilities.length > 1"> + Others</span></div>
+                    <mat-chip-list class="phase-container">
+                        <mat-chip>{{result.phase}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <h4 class="result-title">{{result.title}}</h4>
+                <div class="dates">{{formatDate(result.startDate)}} - {{formatDate(result.endDate)}}</div>
+                <h5 class="operated-by">Operated by: {{result.sponsors[0].name}}</h5>
+            </mat-card>
+
+            <mat-paginator [length]="results.length" [pageSize]="10" (page)="displayPage($event)">
+            </mat-paginator>
+
+            <div class="btn-wrapper">
+                <button mat-raised-button (click)="navigateToSearch()" class="submit-btn btn-style">Search Again</button>
+            </div>                          
+        </div>
+    </div>
+
+</mat-card>

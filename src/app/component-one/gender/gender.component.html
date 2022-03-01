@@ -1,0 +1,50 @@
+<div class="back-header">
+    <div class="back-wrapper" (click)="navigateToHome()">
+        <img class="chevron" src="../../../assets/chevron.png">
+        <div class="back">Back to home</div>
+    </div>
+</div>
+<form class="example-form container" [formGroup]="genderForm">
+    <mat-card *ngIf="!loading" class="component-card-container">
+        <mat-card-content class="content-wrapper">
+            <p>
+                <ngb-progressbar class="progress-bar" type="success" [value]="50" [striped]="true" [animated]="true"><i>50%</i></ngb-progressbar>
+            </p>
+            <div class="input-container">
+                <div class="title">Please select your gender</div>
+                <!-- <mat-radio-group formControlName="gender" aria-label="Select an option" class="example-radio-group">
+                    <div class="radio-btns">
+                        <div class="radio-btn-wrapper ">
+                            <mat-radio-button value="Male" class="example-radio-button">Male</mat-radio-button>
+                        </div>
+                        <div class="radio-btn-wrapper border:1px solid black;float:left">
+                            <mat-radio-button value="Female" class="example-radio-button">Female</mat-radio-button>
+                        </div>
+                        <mat-error *ngIf="genderForm.controls.gender.invalid && genderForm.dirty">Required</mat-error>
+                    </div>
+                </mat-radio-group> -->
+            </div>
+            <div class="btn-padding">
+                <mat-chip-list class="chip-container">
+                    <mat-chip (click)="setFormValue('Male')" [ngClass]="{'selected': maleSelected == true}" class="chip left-chip">
+                        Male
+                    </mat-chip>
+                    <mat-chip (click)="setFormValue('Female')" [ngClass]="{'selected': femaleSelected == true}" class="chip">
+                        Female
+                    </mat-chip>
+                </mat-chip-list>
+                <mat-chip-list>
+                    <mat-chip (click)="setFormValue('Neither')" [ngClass]="{'selected': neitherSelected == true}" class="chip neither-chip">
+                        Prefer Not to Answer
+                    </mat-chip>
+                </mat-chip-list>                
+            </div>
+            <div>
+                <button mat-raised-button [disabled]="!genderForm.valid" type="button" (click)="searchTrials()" class="submit-btn btn-style">
+                        Continue
+                    </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
+<app-loader *ngIf="loading"></app-loader>

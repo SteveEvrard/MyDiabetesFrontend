@@ -1,0 +1,78 @@
+.contact-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card {
+    z-index: 1;
+    font-size: 16px;
+    color: #16316e;
+    background-color: #d9e4fe;
+    width: 70%;
+    h4 {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.content {
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.content-message {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.contact-form-input {
+    width: 45%;
+     ::ng-deep .mat-form-field-outline {
+        background-color: white;
+    }
+}
+
+.name-field-padding {
+    margin-top: 40px;
+}
+
+.btn-style {
+    margin-top: 20px;
+    width: 69%;
+    height: 47px;
+    border-radius: 5px;
+    background-color: #fc6b59;
+    color: white;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #fc6b59;
+    color: white;
+}
+
+@media only screen and (max-width: 415px) {
+    .mission-container {
+        width: 80%;
+    }
+    .faq-email {
+        text-align: center;
+        font-size: large;
+    }
+    .card {
+        width: 95%;
+    }
+    .contact-form-input {
+        width: 90%;
+    }
+    .content-message {
+        margin: 0px;
+    }
+}

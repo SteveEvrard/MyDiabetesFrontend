@@ -1,0 +1,38 @@
+<div class="contact-card-container">
+    <!-- <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+            {{tile.text}}
+        </mat-grid-tile>
+    </mat-grid-list> -->
+    <mat-card class="card">
+        <mat-card-title class="contact-title">Contact Us</mat-card-title>
+        <mat-card-content class="content">
+            <div class="content-message">Email us with any questions or inquiries you have. We would be happy to answer your questions and provide you with any additional information!</div>
+            <form [formGroup]="contactUsForm">
+                <div>
+                    <mat-form-field class="contact-form-input name-field-padding" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="contact-form-input" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="contact-form-input" appearance="outline">
+                        <mat-label>Questions for us</mat-label>
+                        <textarea matInput formControlName="body"></textarea>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button [disabled]="!contactUsForm.valid" type="button" (click)="submit()" class="submit-btn btn-style">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

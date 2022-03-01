@@ -1,0 +1,163 @@
+.welcome-body {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: center;
+  color: #525656;
+  width: 50%;
+}
+
+.how-we-help {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.body-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-ink-bar {
+  color: white;
+}
+
+.mat-tab-header {
+  background-color: cornflowerblue;
+}
+
+.mat-tab-label {
+  font-size: 20px;
+  color: white;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  color: white;
+}
+
+.lower-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f6fe;
+  height: 75vh;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  transform: none;
+  width: 75%;
+  height: 415px;
+  margin-top: 20px;
+}
+
+.card-title-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-content {
+  z-index: 1;
+  width: 30%;
+  margin-top: 10px;
+  min-height: 405px;
+  height: min-content;
+}
+
+.center-card {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.mat-chip-list-wrapper {
+  justify-content: center;
+}
+
+.search-btn {
+  background-color: #fc6b59 !important;
+  height: 47px !important;
+  width: 450px !important;
+  border-radius: 50px !important;
+  font-size: 25px !important;
+  margin-top: 30px !important;
+  display: flex !important;
+  justify-content: center !important;
+  color: white !important;
+  margin-bottom: 30px !important;
+  z-index: 1 !important;
+}
+
+.search-btn:hover {
+  cursor: pointer !important;
+}
+
+.text {
+  padding-left: 10px;
+  color: white;
+}
+
+.icon {
+  color: white;
+  font-size: 32px;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.content-text {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 415px) {
+  .how-we-help {
+    margin-top: -10px;
+    text-align: center;
+  }
+  .welcome-body {
+    width: 90%;
+  }
+  .search-btn {
+    margin-top: 0px !important;
+    width: 100% !important;
+  }
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  ::ng-deep .mat-chip-list-wrapper {
+    width: 82%;
+  }
+  .card-container {
+    display: inline-block;
+  }
+  .card-content {
+    min-height: fit-content;
+    width: 100%;
+  }
+  .center-card {
+    margin-left: 0px;
+  }
+  .lower-container {
+    height: 1200px;
+  }
+}
+
+.feedback-button {
+  position: absolute !important;
+  right: 0 !important;
+  top: 25vw;
+  background-color: #fc6b59 !important;
+  color: white;
+}

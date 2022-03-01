@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto&display=swap");
+html,
+body {
+  font-family: "Cairo", sans-serif !important;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  // overflow-x: hidden;
+  background: #ffffff;
+  margin: 0;
+  font-family: "Cairo", sans-serif !important;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+}
+
+.component-styling {
+  height: 100vh;
+  z-index: 1;
+}
+
+app-component-one,
+app-age,
+app-location,
+app-gender {
+  width: 100%;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: white;
+}
+
+.snackbar {
+  background-color: forestgreen;
+  color: white;
+}
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";

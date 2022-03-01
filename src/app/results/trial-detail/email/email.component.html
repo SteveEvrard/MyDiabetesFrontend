@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>Take the next step!</h2>
+<mat-dialog-content>
+  <h4>Enter your email for more details:</h4>
+  <form [formGroup]="emailForm">
+    <div class="email-name-container">
+      <mat-form-field
+        appearance="outline"
+        class="example-full-width selector email-first"
+      >
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field
+        appearance="outline"
+        class="example-full-width selector email-last"
+      >
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" />
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline" class="example-full-width selector">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width selector">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width selector">
+      <mat-label>Referred By</mat-label>
+      <input matInput formControlName="referredBy" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width selector">
+      <mat-label>Additional Comments or Questions</mat-label>
+      <textarea matInput formControlName="body"></textarea>
+    </mat-form-field>
+    <mat-checkbox
+      labelPosition="after"
+      color="primary"
+      formControlName="agreeToContact"
+      >I agree to be contacted by this trial</mat-checkbox
+    >
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="email-dialog-container">
+  <button mat-raised-button class="email-cancel-btn" (click)="onNoClick()">
+    Close
+  </button>
+  <button
+    mat-raised-button
+    class="email-submit-btn"
+    [disabled]="!emailForm.valid"
+    (click)="save()"
+  >
+    Submit
+  </button>
+</mat-dialog-actions>
