@@ -9,10 +9,11 @@
         <mat-card-title class="title">We searched over 15,000 trials for you</mat-card-title>
         <mat-card-title class="title">And we found {{results.length}} available trial<span *ngIf="results.length != 1">s</span> that match your conditions!</mat-card-title>
         <mat-card-title *ngIf="!displayResults" class="title">ENTER YOUR EMAIL BELOW TO VIEW ALL {{results.length}}</mat-card-title>
+        <mat-card-title *ngIf="!displayResults" class="title">**We will not share your info without permission**</mat-card-title>
         <form *ngIf="!displayResults" [formGroup]="emailForm">
             <mat-card>
                 <div class="email-form">
-                    <mat-form-field appearance="outline" class="example-full-width selector">
+                    <mat-form-field label appearance="outline" class="example-full-width selector">
                         <mat-label>Email</mat-label>
                         <input matInput formControlName="email">
                     </mat-form-field>
